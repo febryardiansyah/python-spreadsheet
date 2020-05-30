@@ -9,8 +9,16 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()        
         self.app = QuickStart()
+        self.app.main()
         self.setup()
-        print(self.setup())
+        self.parse()
+    
+    def parse(self):
+        temp = ''
+        for row in self.app.main():
+            print(f'nilainya adalah :{row[0]}')
+            temp = row[0]
+        return temp
     
     def setup(self):
         print('this got rendered after spreadsheet')
@@ -18,13 +26,11 @@ class MainWindow(QWidget):
         self.move(300,300)
         self.setWindowTitle('Dame Dayo')
 
-        self.label1 = QLabel(f'{self.app.main()} -- result')
-        self.label2 = QLabel('label2')
+        self.label1 = QLabel(f'{self.parse()}')
 
         layout = QGridLayout()
 
         layout.addWidget(self.label1,0,0)
-        layout.addWidget(self.label2,0,1)
         self.setLayout(layout)
 
         

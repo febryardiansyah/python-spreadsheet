@@ -13,6 +13,7 @@ SAMPLE_SPREADSHEET_ID = '1buGm64XMOzg9flMCPjBklzCYjiGrNiW_Jf3yqsJLo64' #ganti id
 SAMPLE_RANGE_NAME = 'A1:AA1000'
 
 class QuickStart:
+    message = []
     def main(self):
         """Shows basic usage of the Sheets API.
         Prints values from a sample spreadsheet.
@@ -47,9 +48,9 @@ class QuickStart:
         if not values:
             print('No data found.')
         else:
-            print('Name, Major:')
             for row in values:
-                # Print columns A and E, which correspond to indices 0 and 4.
-                print('%s, %s' % (row[0], row[1]))
-
-
+                # Print columns A and B, which correspond to indices 0 and 1.
+                message = [row[0],row[1]]
+                print(row[0], row[1])
+        
+        return message
