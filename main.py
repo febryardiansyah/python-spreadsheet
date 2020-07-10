@@ -8,7 +8,7 @@ from quickstart import QuickStart
 class MainWindow(QWidget):    
     def __init__(self):
         super().__init__()        
-        self.app = QuickStart()
+        self.app = main()
         #self.app.main()
         self.setup()
         self.parse()
@@ -34,9 +34,6 @@ class MainWindow(QWidget):
         layout.addWidget(self.label2,1,0)
         self.setLayout(layout)
 
-        
-
-        
 
 if __name__ == '__main__':
 	a= QApplication(sys.argv)
