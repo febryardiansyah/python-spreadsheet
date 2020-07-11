@@ -56,9 +56,11 @@ class Ui_MainWindow(object):
 
     def parse(self, index = 0):
         message = self.app.main()
-        for data in message:
-            self.textEdit.setText(f'nilainya adalah :{data}')
-        return message[index]
+        print(message[0]) #Panggil Suhu : message[0]
+        print(message[1]) #Panggil Kelembapan : message[1]
+
+        self.textEdit.setText(f'Suhu adalah :{message[0]}\nKelembapan : {message[1]} ')
+        return message
 
 
 if __name__ == "__main__":

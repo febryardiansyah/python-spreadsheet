@@ -44,13 +44,12 @@ class QuickStart:
         result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                     range=SAMPLE_RANGE_NAME).execute()
         values = result.get('values', [])
-
+        message = []
         if not values:
             print('No data found.')
         else:
             for row in values:
                 # Print columns A and B, which correspond to indices 0 and 1.
-                message = [row[0],row[1]]
-                print(row[0], row[1])
-        
+                message = [row[0], row[1]]
+                #print(row[0], row[1])
         return message
