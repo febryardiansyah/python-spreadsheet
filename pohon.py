@@ -59,7 +59,7 @@ class Ui_MainWindow(object):
         print(message[0]) #Panggil Suhu : message[0]
         print(message[1]) #Panggil Kelembapan : message[1]
 
-        self.textEdit.setText(f'Suhu adalah :{message[0]}\nKelembapan : {message[1]} ')
+        self.textEdit.setText(f'Suhu adalah : {message[0]}\nKelembapan : {message[1]} ')
         return message
 
 
