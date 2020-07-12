@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(400, 244)
+        MainWindow.resize(395, 244)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -31,7 +31,7 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(150, 170, 75, 23))
+        self.pushButton.setGeometry(QtCore.QRect(165, 170, 75, 23))
         self.pushButton.setObjectName("pushButton")
         self.pushButton.clicked.connect(self.parse)
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setGeometry(QtCore.QRect(190, 100, 141, 20))
         self.lineEdit.setObjectName("lineEdit")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(108, 40, 181, 21))
+        self.label_3.setGeometry(QtCore.QRect(108, 37, 181, 21))
         font = QtGui.QFont()
         font.setPointSize(8)
         self.label_3.setFont(font)
