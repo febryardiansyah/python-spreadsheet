@@ -54,13 +54,15 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Temperature Monitor"))
         self.pushButton.setText(_translate("MainWindow", "Check"))
 
-    def parse(self, index = 0):
-        message = self.app.main()
+    def parse(self):
+        cek = self.app.main("C1:D1")
+        last = "A" + str(cek[0]) + ":B" + str(cek[1])
+        message = self.app.main(last)
         print(message[0]) #Panggil Suhu : message[0]
         print(message[1]) #Panggil Kelembapan : message[1]
 
         self.textEdit.setText(f'Suhu adalah : {message[0]}\nKelembapan : {message[1]} ')
-        return message
+        
 
 
 if __name__ == "__main__":

@@ -14,10 +14,12 @@ SAMPLE_RANGE_NAME = 'A1:AA1000'
 
 class QuickStart:
     message = []
-    def main(self):
+    def main(self, RANGE):
         """Shows basic usage of the Sheets API.
         Prints values from a sample spreadsheet.
         """
+        #Get data based range Spreedsheet
+        SAMPLE_RANGE_NAME = RANGE
         creds = None
         # The file token.pickle stores the user's access and refresh tokens, and is
         # created automatically when the authorization flow completes for the first
@@ -44,12 +46,12 @@ class QuickStart:
         result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                     range=SAMPLE_RANGE_NAME).execute()
         values = result.get('values', [])
-        message = []
+        
         if not values:
             print('No data found.')
         else:
             for row in values:
                 # Print columns A and B, which correspond to indices 0 and 1.
                 message = [row[0], row[1]]
-                #print(row[0], row[1])
+                #print(count, row[0], row[1])
         return message
